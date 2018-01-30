@@ -19,7 +19,7 @@ script:
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make -j4 ; fi
  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then xcodebuild -project jcef.xcodeproj -configuration Release -target ALL_BUILD ; fi
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cd ../tools && ./compile.sh linux64 ; fi
- - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./make-distrib.sh linux64 ; fi
- - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ../tools && ./make-distrib.sh macosx64 ; fi
+ - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./make_distrib.sh linux64 ; fi
+ - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ../tools && ./make_distrib.sh macosx64 ; fi
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cd ../binary_distrib && zip -r java-cef-linux64.zip linux64 ; fi
  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ../binary_distrib && zip -r java-cef-macosx64.zip macosx64 ; fi
