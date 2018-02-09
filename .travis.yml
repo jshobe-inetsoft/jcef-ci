@@ -23,3 +23,8 @@ script:
  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ../tools && ./make_distrib.sh macosx64 || true ; fi
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cd ../binary_distrib && zip -r java-cef-linux64.zip linux64 ; fi
  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ../binary_distrib && zip -r java-cef-macosx64.zip macosx64 ; fi
+
+addons:
+  artifacts:
+    paths:
+      -$(ls -1 $HOME/src/binary_distrib/java-cef-*.zip)
