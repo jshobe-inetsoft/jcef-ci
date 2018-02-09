@@ -27,4 +27,4 @@ script:
 addons:
   artifacts:
     paths:
-      -$(ls -1 $HOME/src/binary_distrib/java-cef-*.zip)
+      - $(ls -1 $TRAVIS_BUILD_DIR/src/binary_distrib/java-cef-*.zip)
