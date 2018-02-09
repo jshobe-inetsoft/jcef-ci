@@ -8,7 +8,6 @@ matrix:
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ant ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew cask install java ; fi
 
 before_script:
  - git clone https://github.com/jshobe-inetsoft/java-cef.git src
